@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sq_ft: 1
+  bedroom: 1
+  bath: 1.5
+  year: 1
+  price: 1
+  garage: false
+  pool: false
+
+two:
+  sq_ft: 1
+  bedroom: 1
+  bath: 1.5
+  year: 1
+  price: 1
+  garage: false
+  pool: false
