@@ -3,9 +3,13 @@
 
 <% if @sellers.any? %>
   <% @sellers.each do |seller| %>
-    <%= link_to seller.name, seller_path(seller) %>
+    <ul>
+    <li><%= link_to seller.name, seller_path(seller) %></li>
+    </ul>
   <% end %>
 <% else %>
   <h3>There's nothing to display</h3>
 <% end %>
+
+<hr />
 <%= link_to "New Seller Profile", new_seller_path %>
