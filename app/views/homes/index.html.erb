@@ -1,2 +1,6 @@
-<h1>List of Homes</h1>
+<h1>List of Homes For Seller: <%= @seller.name %></h1>
 <hr />
+
+<% if @homes.any? %>
+  <% @homes.each do |home| %>
+    <% home

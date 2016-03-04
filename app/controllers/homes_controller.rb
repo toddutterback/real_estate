@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
 before_action :seller
-  before_action :home, only: [:show, :edit, :update, :destroy]
+before_action :home, only: [:show, :edit, :update, :destroy]
 
   def index
     @homes = @seller.homes.all
@@ -41,7 +41,7 @@ before_action :seller
 
   private
     def home_params
-      params.require(:home).permit(:sq_ft, :bedroom, :bath, :year, :price, :garage, :pool)
+      params.require(:home).permit(:title, :sq_ft, :bedroom, :bath, :year, :price, :garage, :pool)
     end
 
     def seller

@@ -1,6 +1,7 @@
 class CreateHomes < ActiveRecord::Migration
   def change
     create_table :homes do |t|
+      t.string :title
       t.integer :sq_ft
       t.integer :bedroom
       t.float :bath
