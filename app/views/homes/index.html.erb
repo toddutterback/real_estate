@@ -3,4 +3,10 @@
 
 <% if @homes.any? %>
   <% @homes.each do |home| %>
-    <% home
+    <%= link_to home.title, seller_home_path(@seller, home) %>
+  <% end %>
+<% else %>
+  <h3>No homes listed.</h3>
+<% end %>
+
+<%= link_to 'List new home', new_seller_home_path(@seller) %>
