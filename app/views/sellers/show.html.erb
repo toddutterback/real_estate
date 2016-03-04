@@ -9,3 +9,7 @@
 <button type='button'>
 <%= link_to 'View Homes', seller_homes_path(@seller) %>
 </button>
+
+<button type='button'>
+  <%= link_to 'Delete', seller_path(@seller), method: :delete %>
+</button>

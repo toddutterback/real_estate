@@ -9,6 +9,7 @@ class CreateHomes < ActiveRecord::Migration
       t.integer :price
       t.boolean :garage
       t.boolean :pool
+      t.belongs_to :seller
 
       t.timestamps null: false
     end

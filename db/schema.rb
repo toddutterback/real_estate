@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160304193627) do
     t.string   "city"
     t.string   "state"
     t.integer  "zip"
+    t.integer  "home_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160304193627) do
     t.integer  "price"
     t.boolean  "garage"
     t.boolean  "pool"
+    t.integer  "seller_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
