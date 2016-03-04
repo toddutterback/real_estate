@@ -1,2 +1,10 @@
 <h1> Add a new Seller </h1>
 <hr />
+
+<%= form_for @seller do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: 'Name', required: true %>
+  <%= f.label :phone_number %>
+  <%= f.number :phone_number %>
+  <%= f.submit %>
+  <% end %>
