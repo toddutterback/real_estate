@@ -1,3 +1,11 @@
 <h1>Real Estate Portal</h1>
 <hr />
 
+<% if @sellers.any? %>
+  <% @sellers.each do |seller| %>
+    <%= link_to seller.name, seller_path(seller) %>
+  <% end %>
+<% else %>
+  <h3>There's nothing to display</h3>
+<% end %>
+<%= link_to "New Seller Profile", new_seller_path %>
