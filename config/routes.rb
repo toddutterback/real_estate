@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  get 'addresses/index'
+
+  get 'addresses/show'
+
+  get 'addresses/new'
+
+  get 'homes/index'
+
+  get 'homes/show'
+
+  get 'homes/new'
+
+  get 'sellers/index'
+
+  get 'sellers/show'
+
+  get 'sellers/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
