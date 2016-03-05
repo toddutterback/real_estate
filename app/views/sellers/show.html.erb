@@ -7,7 +7,15 @@
 
 <hr />
 <button type='button'>
-<%= link_to 'View Homes', seller_homes_path(@seller) %>
+<%= link_to 'Home Page', sellers_path %>
+</button>
+
+<button type='button'>
+<%= link_to 'Homes for Sale', seller_homes_path(@seller) %>
+</button>
+
+<button type='button'>
+<%= link_to 'Edit Profle', edit_seller_path %>
 </button>
 
 <button type='button'>

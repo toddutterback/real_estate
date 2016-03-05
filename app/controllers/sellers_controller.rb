@@ -9,6 +9,7 @@ class SellersController < ApplicationController
   end
 
   def edit
+    @seller = Seller.find(params[:id])
   end
 
   def update
