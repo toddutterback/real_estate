@@ -11,7 +11,12 @@
   <li><%= @home.pool %></li>
 </ul>
 
-<%= link_to 'Home Address', seller_home_addresses_path(@seller, @home)%>
+<% if @address.nil? %>
+  <%= link_to 'Add Address', new_seller_home_address(@seller, @home) %>
+<% else %>
+  <%= link_to 'Home Address', seller_home_address_path(@seller, @home, @address)%>
+<% end %>
+
 <hr />
 <%= link_to 'Edit Home', edit_seller_home_path(@seller, @home) %>
 <hr />

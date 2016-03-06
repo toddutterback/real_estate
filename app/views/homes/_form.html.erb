@@ -1,27 +1,27 @@
-<%= form_for @home do |f| %>
+<%= form_for [@seller, @home] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title, required: true %>
-
+  <br />
   <%= f.label :sq_ft %>
   <%= f.text_field :sq_ft, required: true %>
-
+  <br />
   <%= f.label :bedroom %>
   <%= f.text_field :bedroom, required: true %>
-
+  <br />
   <%= f.label :bath %>
   <%= f.text_field :bath, required: true %>
-
+  <br />
   <%= f.label :year %>
   <%= f.text_field :year, required: true %>
-
+  <br />
   <%= f.label :price %>
   <%= f.text_field :price, required: true %>
-
+  <br />
   <%= f.label :garage %>
   <%= f.text_field :garage, required: true %>
-
+  <br />
   <%= f.label :pool %>
   <%= f.text_field :pool, required: true %>
-
+  <br />
   <%= f.submit %>
   <% end %>

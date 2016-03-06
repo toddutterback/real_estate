@@ -7,7 +7,6 @@ before_action :home, only: [:show, :edit, :update, :destroy]
   end
 
   def show
-    @home = Home.find(params[:seller_id])
   end
 
   def edit
@@ -27,7 +26,7 @@ before_action :home, only: [:show, :edit, :update, :destroy]
 
   def create
     @home = @seller.homes.new(home_params)
-    if @address.save
+    if @home.save
       redirect_to seller_homes_path(@seller)
     else
       render :new
@@ -49,6 +48,6 @@ before_action :home, only: [:show, :edit, :update, :destroy]
     end
 
     def home
-      @seller.homes.find(params[:id])
+      @home = @seller.homes.find(params[:id])
     end
 end

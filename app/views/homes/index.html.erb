@@ -4,6 +4,7 @@
 <% if @homes.any? %>
   <% @homes.each do |home| %>
     <%= link_to home.title, seller_home_path(@seller, home) %>
+    <br />
   <% end %>
 <% else %>
   <h3>No homes listed.</h3>
