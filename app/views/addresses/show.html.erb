@@ -1,2 +1,20 @@
-<h1>Addresses#show</h1>
-<p>Find me in app/views/addresses/show.html.erb</p>
+<h1>Address</h1>
+<hr />
+
+<%= @address.street %>
+<hr />
+<%= @address.city %>
+<hr />
+<%= @address.state %>
+<hr />
+<%= @address.zip %>
+<br />
+
+<button type='button'>
+<%= link_to 'Edit Address', edit_seller_home_address_path(@seller, @home, @address) %>
+</button>
+<hr />
+
+<button type='button'>
+<%= link_to 'Delete Address', seller_home_address_path(@seller, @home, @address), method: :delete %>
+</button>

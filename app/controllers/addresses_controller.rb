@@ -31,13 +31,18 @@ class AddressesController < ApplicationController
     end
   end
 
+  def destroy
+    @address.destroy
+    redirect_to seller_home_path(@seller, @home)
+  end
+
   private
     def address_params
       params.require(:address).permit(:city, :state, :zip, :street)
     end
 
     def seller
-      @seller = seller.find(params[:seller_id])
+      @seller = Seller.find(params[:seller_id])
     end
 
     def home
