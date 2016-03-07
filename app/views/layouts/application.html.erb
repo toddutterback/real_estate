@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to 'Logout', logout_path %>
+
 <%= yield %>
 
 </body>
+<footer>
+
+<br />
+<button type='button'>
+<%= link_to 'Profile Page', users_path %>
+</button>
+
+
+<button type='button'>
+<%= link_to 'Your Agents', sellers_path %>
+</button>
+
+
+
+<button type='button'>
+<%= link_to 'Logout', logout_path %>
+</button>
+
+</footer>
 </html>
