@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'home/index'
+  get 'landing_page/index'
 
 root 'home#index'
 
