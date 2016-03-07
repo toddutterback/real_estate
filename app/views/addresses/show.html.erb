@@ -1,14 +1,16 @@
 <h1>Address</h1>
 <hr />
 
+<h3>
 <%= @address.street %>
-<hr />
+<br />
 <%= @address.city %>
-<hr />
-<%= @address.state %>
-<hr />
+
+, <%= @address.state %>
+
 <%= @address.zip %>
 <br />
+</h3>
 
 <button type='button'>
 <%= link_to 'Edit Address', edit_seller_home_address_path(@seller, @home, @address) %>

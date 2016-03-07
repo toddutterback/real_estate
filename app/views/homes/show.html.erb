@@ -7,8 +7,8 @@
   <li>Bedrooms: <%= @home.bedroom %></li>
   <li>Bath: <%= @home.bath %></li>
   <li>Year Built: <%= @home.year %></li>
-  <li>Garage: <%= @home.garage %></li>
-  <li><%= @home.pool %></li>
+  <li>Garage: <%= 'Yes' if @home.garage %></li>
+  <li>Pool: <%= 'Yes' if @home.pool %></li>
 </ul>
 
 
