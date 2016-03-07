@@ -7,11 +7,7 @@ before_action :home, only: [:show, :edit, :update, :destroy]
   end
 
   def show
-    if @home != nil
-      @address = @home.address
-    else
-     # do nothing
-    end
+    @address = @home.address if @home != nil
   end
 
   def edit

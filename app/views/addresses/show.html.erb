@@ -18,3 +18,7 @@
 <button type='button'>
 <%= link_to 'Delete Address', seller_home_address_path(@seller, @home, @address), method: :delete %>
 </button>
+
+<button type='button'>
+<%= link_to 'Back', seller_home_path(@seller, @home)%>
+</button>
