@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
 
-  get 'sessions/new'
+  get 'home/index'
 
-root 'sellers#index'
+root 'home#index'
 
   resources :sellers do
     resources :homes do
       resources :addresses
     end
   end
+
+  resources :users
+  resources :sessions
 
 end
