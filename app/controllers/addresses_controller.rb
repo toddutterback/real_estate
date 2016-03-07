@@ -11,8 +11,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.create(address_params)
-    @address.home_id = @home.id
+    @address = @home.create_address(address_params)
     if @address.save
       redirect_to seller_home_address_path(@seller, @home, @address)
     else

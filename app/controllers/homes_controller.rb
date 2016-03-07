@@ -1,14 +1,17 @@
 class HomesController < ApplicationController
 before_action :seller
 before_action :home, only: [:show, :edit, :update, :destroy]
-before_action :address
-
 
   def index
     @homes = @seller.homes.all
   end
 
   def show
+    if @home != nil
+      @address = @home.address
+    else
+     # do nothing
+    end
   end
 
   def edit
@@ -53,7 +56,4 @@ before_action :address
       @home = @seller.homes.find(params[:id])
     end
 
-    def address
-      @address = @home.address
-    end
 end
