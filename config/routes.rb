@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  root 'landing_page#index'
 
-  get 'landing_page/index'
+  get '/signup', to: 'users#new', as: 'signup'
+  get '/login', to: 'sessions#new', as: 'login'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
 
-root 'home#index'
+  post '/signup', to: 'users#create'
+  post '/login', to: 'sessions#create'
 
   resources :sellers do
     resources :homes do
@@ -13,5 +17,6 @@ root 'home#index'
 
   resources :users
   resources :sessions
+  resources :landing_page
 
 end
