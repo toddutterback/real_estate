@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-before_action :seller
+before_action :authorize, :seller
 before_action :home, only: [:show, :edit, :update, :destroy]
 
   def index

@@ -1,5 +1,5 @@
 class AddressesController < ApplicationController
-  before_action :seller
+  before_action :authorize, :seller
   before_action :home
   before_action :address, only: [:show, :edit, :update, :destroy]
 

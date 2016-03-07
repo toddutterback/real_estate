@@ -1,5 +1,5 @@
 class SellersController < ApplicationController
-
+  before_action :authorize
   def index
     @sellers = Seller.all
   end
