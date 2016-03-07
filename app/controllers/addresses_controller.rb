@@ -11,9 +11,10 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = @home.address.new(address_params)
+    @address = Address.create(address_params)
+    @address.home_id = @home.id
     if @address.save
-      redirect_to seller_home_address_path(@seller, @homer, @address)
+      redirect_to seller_home_address_path(@seller, @home, @address)
     else
       render :new
     end
@@ -50,6 +51,6 @@ class AddressesController < ApplicationController
     end
 
     def address
-      @address = @home.address.find(params[:id])
+      @address = @home.address
     end
 end

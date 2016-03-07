@@ -12,13 +12,14 @@
 </ul>
 
 
-<% if @address.nil? %>
+<% if @address %>
   <button type='button'>
-  <%= link_to 'Add Address', new_seller_home_address_path(@seller, @home) %>
+  <%= link_to 'See Address', seller_home_address_path(@seller, @home, @address) %>
   </button>
 <% else %>
 <button type='button'>
-  <%= link_to 'See Address', seller_home_address_path(@seller, @home, @address) %>
+<%= link_to 'Add Address', new_seller_home_address_path(@seller, @home) %>
+  
   </button>
 <% end %>
 
